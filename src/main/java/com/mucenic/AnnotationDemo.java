@@ -1,3 +1,5 @@
+package com.mucenic;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
@@ -13,7 +15,7 @@ import java.util.ArrayList;
 // Retention ===> Indicates how long annotations with the annotated type are to be retained.  If no Retention annotation is present on an annotation type declaration, the retention policy defaults to RetentionPolicy.CLASS.
 
 //Name 3 annotations that you have seen!
-// ====> @Override, @BeforeEach, @AfterEach, @Getter, @Setter, @Retention, @Target, @WebServlet, @Controller
+// ====> @Override, @BeforeEach, @AfterEach, @Getter, @Setter, @Retention, @Target, @WebServlet, @Controller, @RestController, @GetMapping
 
 //Why do annotations exist?
 // Annotations provide data about a program that is not part of the program itself. They have no direct effect on the operation of the code they annotate.
@@ -28,7 +30,7 @@ interface Abc{
 class A{
     @Deprecated
     public void show(){
-        System.out.println("This is class A");
+        System.out.println("This is class com.mucenic.A");
     }
 }
 
@@ -36,10 +38,10 @@ class B extends A{
 
     @Override
 
-    //override a method from class A
+    //override a method from class com.mucenic.A
     public void show(){
         ArrayList obj = new ArrayList();
-        System.out.println("This is class B");
+        System.out.println("This is class com.mucenic.B");
     }
 }
 
